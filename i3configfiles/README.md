@@ -30,7 +30,8 @@
   ```
   pip install autotiling
   ```
-  >or link to gitbub repo [link to git repo of autotiling!](https://github.com/nwg-piotr/auto    tiling) 
+  > or link to gitbub repo 
+  [link to git repo of autotiling!](https://github.com/nwg-piotr/autotiling)
 
   After installing the autotiling 
   put this stuff in your `.xprofile`
