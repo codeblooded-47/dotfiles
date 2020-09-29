@@ -25,39 +25,35 @@
   Rofi config located in `.config/rofi`
 
 ### 4. autotiling
-	To install autotiling run the following commannd
-	```
-	pip install autotiling
-	```
-# OR
-	[link to git repo of autotiling!](https://github.com/nwg-piotr/autotiling)
+  To install autotiling run the following commannd
 
+  ```
+  pip install autotiling
+  ```
+  >or link to gitbub repo [link to git repo of autotiling!](https://github.com/nwg-piotr/auto    tiling) 
 
-	After installing the autotiling 
-
-	put this stuff in your `.xprofile`
-
-	```
-        # Stop screen from going blank
-	xset s off
-	xset -dpms
-	xset s noblank
-	# Faster key repeat and delay
-	xset r rate 210 40	
-	```
+  After installing the autotiling 
+  put this stuff in your `.xprofile`
+  ```
+  # Stop screen from going blank
+  xset s off
+  xset -dpms
+  xset s noblank
+  # Faster key repeat and delay
+  xset r rate 210 40	
+  ```
 ### 5. xbacklight
 
-	To install the xbacklight run the following command 
+  To install the xbacklight run the following command 
 
-	```
-	sudo apt install xbacklight
-	```
+  ```
+  sudo apt install xbacklight
+  ```
 ### 6. compton
 	
-	TO Install compton run the following command
+  TO Install compton run the following command
 
-	```
-	sudo apt install compton
-	```
-
-	after installing put the `compton.conf` file into the `.config`
+  ```
+  sudo apt install compton
+  ```
+  after installing put the `compton.conf` file into the `.config`
