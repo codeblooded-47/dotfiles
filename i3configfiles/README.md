@@ -59,6 +59,10 @@
   ```
   after installing put the `compton.conf` file into the `.config`
 
+### 7. i3gaps
+  To install the i3gaps run the `i3wm-gaps-install.sh` located in the git repo `dotfiles/i3configfiles/`
+
+
 ### screenshot
   screenshot of desktop
 ![i3wm](https://github.com/codeblooded-47/dotfiles/blob/master/i3configfiles/screenshot.png)
