@@ -57,3 +57,7 @@
   sudo apt install compton
   ```
   after installing put the `compton.conf` file into the `.config`
+
+### screenshot
+  screenshot of desktop
+![Image of Yaktocat](https://github.com/codeblooded-47/dotfiles/blob/master/screenshot.png)
