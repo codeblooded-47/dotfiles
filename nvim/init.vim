@@ -16,7 +16,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'jiangmiao/auto-pairs'
 
     Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
-    Plug 'ycm-core/YouCompleteMe'
+"   Plug 'ycm-core/YouCompleteMe'
     Plug 'preservim/nerdtree'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
@@ -27,7 +27,55 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'chrisbra/colorizer'
     Plug 'JamshedVesuna/vim-markdown-preview'
     Plug 'forevernull/vim-json-format'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
+
+" Keys remapping 
+"
+" Escape key 
+inoremap jj <C-[>
+
+
+" Save and quite (saveandquite)
+map <space>wq :wq! <CR>
+" Edit vim config file (editvimconfigfile) (editnvimconfigfile)
+map <space>ecf :e $MYVIMRC<CR>
+
+" Close File without saving (closefilewithoutsaving)
+map <space>q :q!<CR>
+
+
+" Coc stuff
+" coc#_select_confirm() helps select first complete item when there's no complete item selected,
+inoremap <silent><expr> <Enter>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" Or use `complete_info` if your vim support it, like:
+" inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+
+
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
 
