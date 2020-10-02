@@ -1,0 +1,2 @@
+#installation of Ncmpcpp //music plyaer for mpd
+url: https://addy-dclxvi.github.io/post/configuring-ncmpcpp/
